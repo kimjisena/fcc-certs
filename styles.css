@@ -1,0 +1,11 @@
+body {
+    background-color: hsla(69, 42%, 69%, 0.75);
+    margin: 0;
+}
+
+.main {
+    width: 80%;
+    min-width: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+}

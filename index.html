@@ -7,72 +7,78 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title">Bookish Survey</h1>
-    <p id="description">
-      Thank you for sharing your bookishness!
-    </p>
-    <form id="survey-form" action="https://survey-form.freecodecamp.rocks/">
-        <fieldset>
-            <label id="name-label">
-                Name 
-                <input id="name" type="text" name="name" placeholder="e.g: Alice Wunderland" required />
-              </label>
-              <label id="email-label">
-                Email 
-                <input id="email" type="email" name="email" placeholder="e.g: alice@wunder.com" required />
-              </label>
-              <label id="number-label">
-                Age (optional) 
-                <input id="number" type="number" name="age" placeholder="e.g: 10" min="5" max="120" />
-              </label>
-        </fieldset>
-        <fieldset>
-            <select id="dropdown" name="favorite">
-                <option>Select one option</option>
-                <option>Air</option>
-                <option>Earth</option>
-                <option>Fire</option>
-                <option>Water</option>
-            </select>
-
-            <label>
-                <input type="radio" name="book" /> 
-                The Alchemist
-            </label>
-            <label>
-                <input type="radio" name="book" /> 
-                Angels &amp; Demons
-            </label>
-            <label>
-                <input type="radio" name="book" />  
-                Da Vinci code
-            </label>
+      <div class="main">
+        <header>
+            <h1 id="title">Bookish Survey</h1>
+            <p id="description">
+              Thank you for sharing your bookishness!
+            </p>
+          </header>
+          <main>
+            <form id="survey-form" action="https://survey-form.freecodecamp.rocks/">
+                <fieldset>
+                    <label id="name-label">
+                        Name 
+                        <input id="name" type="text" name="name" placeholder="e.g: Alice Wunderland" required />
+                      </label>
+                      <label id="email-label">
+                        Email 
+                        <input id="email" type="email" name="email" placeholder="e.g: alice@wunder.com" required />
+                      </label>
+                      <label id="number-label">
+                        Age (optional) 
+                        <input id="number" type="number" name="age" placeholder="e.g: 10" min="5" max="120" />
+                      </label>
+                </fieldset>
+                <fieldset>
+                    <select id="dropdown" name="favorite">
+                        <option>Select one option</option>
+                        <option>Air</option>
+                        <option>Earth</option>
+                        <option>Fire</option>
+                        <option>Water</option>
+                    </select>
         
-            <label>
-                <input type="checkbox" name="fiction" value="fiction" /> 
-                Fiction
-            </label>
-            <label>
-                <input type="checkbox" name="non-fiction" value="non-fiction" /> 
-                Non-Fiction
-            </label>
-              <label>
-                <input type="checkbox" name="sci-fiction" value="sci-fi" /> 
-                Sci-Fi
-              </label>
-              <label>
-                <input type="checkbox" name="fan-fiction" value="fan-fiction" /> 
-                Fan-Fiction
-              </label>
-        </fieldset>
-
-        <fieldset>
-            <textarea placeholder="Additional comments...">
-            </textarea>
-            <button id="submit" type="submit">
-              Submit
-            </button>
-        </fieldset>
-    </form>
+                    <label>
+                        <input type="radio" name="book" /> 
+                        The Alchemist
+                    </label>
+                    <label>
+                        <input type="radio" name="book" /> 
+                        Angels &amp; Demons
+                    </label>
+                    <label>
+                        <input type="radio" name="book" />  
+                        Da Vinci code
+                    </label>
+                
+                    <label>
+                        <input type="checkbox" name="fiction" value="fiction" /> 
+                        Fiction
+                    </label>
+                    <label>
+                        <input type="checkbox" name="non-fiction" value="non-fiction" /> 
+                        Non-Fiction
+                    </label>
+                      <label>
+                        <input type="checkbox" name="sci-fiction" value="sci-fi" /> 
+                        Sci-Fi
+                      </label>
+                      <label>
+                        <input type="checkbox" name="fan-fiction" value="fan-fiction" /> 
+                        Fan-Fiction
+                      </label>
+                </fieldset>
+        
+                <fieldset>
+                    <textarea placeholder="Additional comments...">
+                    </textarea>
+                    <button id="submit" type="submit">
+                      Submit
+                    </button>
+                </fieldset>
+            </form>
+          </main>
+      </div>
   </body>
 </html>
