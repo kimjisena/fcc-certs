@@ -4,8 +4,10 @@ html {
 }
 
 body {
-    background-color: hsla(69, 42%, 69%, 0.75);
+    background-color: rgb(122, 122, 180);
+    background: linear-gradient(90deg, rgb(80, 178, 196), rgb(172, 214, 172), rgb(159, 159, 221));
     margin: 0;
+    color: hsl(269, 34%, 19%);
 }
 
 .main {
@@ -22,8 +24,14 @@ h1 {
 
 p {
     font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .inline {
     display: block;
+    margin: 0 0 1rem 0;
+}
+
+fieldset {
+    margin: 1rem 0;
 }
