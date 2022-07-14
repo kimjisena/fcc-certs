@@ -1,6 +1,27 @@
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 #image {
     display: block;
     max-width: 100%;
     height: auto;
     margin: auto;
+}
+
+figure {
+    text-align: center;
 }
