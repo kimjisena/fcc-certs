@@ -1,18 +1,42 @@
 html{
     font-size: 10px;
+    font-family: Roboto, sans-serif;
     box-sizing: border-box;
+    color: rgba(1, 41, 7, 1);
 }
 
 body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: rgba(223, 190, 190, 0.56);
 }
 
 main {
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-family: 'Roboto Serif', serif;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-family: 'Roboto Serif', serif;
+}
+
+h3 {
+    font-size: 2.0rem;
+}
+
+p, li, figcaption {
+    font-size: 1.7rem;
+}
+#title {
+    text-align: center;
 }
 
 #image {
@@ -24,4 +48,21 @@ main {
 
 figure {
     text-align: center;
+}
+
+.divider {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(1, 41, 7, 1);;
+}
+
+.sm {
+    height: 3px;
+}
+a {
+    color: rgba(1, 41, 7, 1);
+}
+
+.indent {
+    margin-left: 15px;
 }
