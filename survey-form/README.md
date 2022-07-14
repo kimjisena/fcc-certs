@@ -21,4 +21,4 @@ Objective: Build an app that is functionally similar to [survey form](https://su
 15. Inside the form element, you are presented with a textarea for additional comments
 16. Inside the form element, you are presented with a button with id of submit to submit all the inputs
 
-Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+Fulfill the user stories and pass all the tests to complete this project. Give it your own personal style. Happy Coding!
