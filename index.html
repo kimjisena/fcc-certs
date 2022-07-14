@@ -9,7 +9,7 @@
   <body>
       <div class="main">
         <header>
-            <h1 id="title">Bookish Survey</h1>
+            <h1 id="title">Bookish Survey Form</h1>
             <p id="description">
               Thank you for sharing your bookishness!
             </p>
@@ -30,50 +30,137 @@
                         <input id="number" class="inline" type="number" name="age" placeholder="e.g: 10" min="5" max="120" />
                       </label>
                 </fieldset>
-                
+
                 <fieldset>
-                    <select id="dropdown" name="favorite">
-                        <option>Select one option</option>
-                        <option>Air</option>
-                        <option>Earth</option>
-                        <option>Fire</option>
-                        <option>Water</option>
-                    </select>
-        
                     <label>
-                        <input type="radio" name="book" /> 
-                        The Alchemist
+                        What is your favorite genre?
+                        <select id="dropdown" name="fav-genre">
+                            <option value="0" disabled>Select one option</option>
+                            <option value="1">Non-Fiction</option>
+                            <option value="2">Fiction</option>
+                            <option value="3">Sci-Fi</option>
+                            <option value="4">Pulp Fiction</option>
+                            <option value="5">Fan-Fiction</option>
+                            <option value="6">Autobiography</option>
+                            <option value="7">Romance</option>
+                            <option value="8">Fantasy</option>
+                            <option value="9">Comedy</option>
+                            <option value="10">Tragedy</option>
+                            <option value="11">History</option>
+                            <option value="12">Romcom</option>
+                            <option value="13">Other</option>
+                        </select>
+                    </label>
+
+                    <p>What is your favorite element?</p>
+                    <label>
+                        <input type="radio" name="fav-element" checked /> 
+                        Air
                     </label>
                     <label>
-                        <input type="radio" name="book" /> 
-                        Angels &amp; Demons
+                        <input type="radio" name="fav-element" /> 
+                        Fire
                     </label>
                     <label>
-                        <input type="radio" name="book" />  
-                        Da Vinci code
-                    </label>
-                
-                    <label>
-                        <input type="checkbox" name="fiction" value="fiction" /> 
-                        Fiction
+                        <input type="radio" name="fav-element" />  
+                        Water
                     </label>
                     <label>
-                        <input type="checkbox" name="non-fiction" value="non-fiction" /> 
-                        Non-Fiction
+                        <input type="radio" name="fav-element" />  
+                        Earth
                     </label>
-                      <label>
-                        <input type="checkbox" name="sci-fiction" value="sci-fi" /> 
-                        Sci-Fi
-                      </label>
-                      <label>
-                        <input type="checkbox" name="fan-fiction" value="fan-fiction" /> 
-                        Fan-Fiction
-                      </label>
+
+                    <p>How best do you describe yourself? (Check all that apply)</p>
+                    <label>
+                        <input type="checkbox" name="realist" value="realist" /> 
+                        Realist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="idealist" value="idealist" />
+                        Idealist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="materialist" value="materialist" />
+                        Materialist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="escapist" value="escapist" />
+                        Escapist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="surrealist" value="surrealist" />
+                        Surrealist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="utopian" value="utopian" />
+                        Utopian
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cosmopolitan" value="cosmopolitan" />
+                        Cosmopolitan
+                    </label>
+                    <label>
+                        <input type="checkbox" name="minimalist" value="minimalist" />
+                        Minimalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="maximalist" value="maximalist" />
+                        Maximalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="nihilist" value="nihilist" />
+                        Nihilist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="creationist" value="creationist" />
+                        Creationist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="naturalist" value="naturalist" />
+                        Naturalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="libertarian" value="libertarian" />
+                        Libertarian
+                    </label>
+                    <label>
+                        <input type="checkbox" name="conservative" value="conservative" />
+                        Conservative
+                    </label>
+                    <label>
+                        <input type="checkbox" name="communist" value="communist" />
+                        Communist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="capitalist" value="capitalist" />
+                        Capitalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="environmentalist" value="environmentalist" />
+                        Environmentalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="survivalist" value="survivalist" />
+                        Survivalist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="currentist" value="currentist" />
+                        Currentist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="holist" value="holist" />
+                        Holist
+                    </label>
                 </fieldset>
         
                 <fieldset>
-                    <textarea placeholder="Additional comments...">
-                    </textarea>
+                    <label>
+                        If you were to live as your favorite character: <br />
+                        1. Who would that be? <br />
+                        2. How would it be like? <br />
+                        <textarea rows="6" cols="45" placeholder="Pour your heart out bookworm!">
+                        </textarea>
+                    </label>
                     <button id="submit" type="submit">
                       Submit
                     </button>
