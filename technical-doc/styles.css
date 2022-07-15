@@ -64,6 +64,18 @@ p, ol, ul {
     padding-left: 20px;
 }
 
+code {
+    font-weight: bold;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.indent-further {
+    margin-left: 40px;
+}
+
 aside {
     background-color: antiquewhite;
     height: 100%;
