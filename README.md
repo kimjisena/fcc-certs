@@ -19,3 +19,12 @@ passionate tech savy geek, I've grown looking up to giants of the likeness of `d
 forever grateful for the work they (`dmr` et al.) did at Bell Labs.
 - [source](./tribute-page/)
 - [see it live here](https://codepen.io/kimjisena/full/wvmoPBo)
+
+### 3. Technical Documentaion
+
+In this project, I built a technical documentation page based on Rob Pike's _Notes on Programming 
+in C_ essay. Rob Pike is one of the giants on whose shoulders I'm standing.
+
+Well, I literally just copied the essay with very little modification.
+- [source](./technical-doc/)
+- [see it live here](https://codepen.io/kimjisena/full/RwMKbQv)
