@@ -10,13 +10,13 @@
         <main id="main-doc">
             <!-- navigation -->
             <nav id="navbar">
-                <header>Rob Pike's Notes on Programming in C</header>
+                <header>Notes on Programming in C</header>
 
                 <a href="#Introduction" class="nav-link">Introduction</a>
                 <a href="#Typography" class="nav-link">Typography</a>
                 <a href="#Variables" class="nav-link">Variables</a>
                 <a href="#Pointers" class="nav-link">Pointers</a>
-                <a href="#Functions" class="nav-link">Functions</a>
+                <a href="#Procedures" class="nav-link">Procedures</a>
                 <a href="#Comments" class="nav-link">Comments</a>
                 <a href="#Complexity" class="nav-link">Complexity</a>
                 <a href="#Data" class="nav-link">Data</a>
@@ -28,8 +28,26 @@
             <!-- main sections -->
             <section class="main-section" id="Introduction">
                 <header>Introduction</header>
-                <p></p>
-                <p></p>
+                <p>
+                    Kernighan and Plauger's <i>The Elements of Programming Style</i> was an important and rightly
+                    influential book. But sometimes I feel its concise rules were taken as a cookbook approach to good style
+                    instead of the succinct expression of a philosophy they were meant to be. If the book claims that variable
+                    names should be chosen meaningfully, doesn't it then follow that variables whose names are small essays
+                    on their use are even better? Isn't <code>MaximumValueUntilOverflow</code> a better name than <code>maxval</code>? I
+                    don't think so.
+                </p>
+                <p>
+                    What follows is a set of short essays that collectively encourage a philosophy of clarity in program-
+                    ming rather than giving hard rules. I don't expect you to agree with all of them, because they are opinion
+                    and opinions change with the times. But they've been accumulating in my head, if not on paper until now,
+                    for a long time, and are based on a lot of experience, so I hope they help you understand how to plan the
+                    details of a program. (I've yet to see a good essay on how to plan the whole thing, but then that's partly
+                    what this course is about.) If you find them idiosyncratic, fine; if you disagree with them, fine; but if they
+                    make you think about why you disagree, that's better. Under no circumstances should you program the
+                    way I say to because I say to; program the way you think expresses best what you're trying to accomplish
+                    in the program. And do so consistently and ruthlessly.
+                </p>
+                <p>Your comments are welcome.</p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -38,8 +56,23 @@
 
             <section class="main-section" id="Typography">
                 <header>Typography</header>
-                <p></p>
-                <p></p>
+                <p>
+                    A program is a sort of publication. It's meant to be read by the programmer, another programmer
+                    (perhaps yourself a few days, weeks or years later), and lastly a machine. The machine doesn't care how
+                    pretty the program is — if the program compiles, the machine's happy — but people do, and they should.
+                    Sometimes they care too much: pretty printers mechanically produce pretty output that accentuates
+                    irrelevant detail in the program, which is <b>as</b> sensible <b>as</b> putting all the prepositions <b>in</b> English text <b>in</b> bold
+                    font. Although many people think programs should look like the Algol-68 report (and some systems even
+                    require you to edit programs in that style), a clear program is not made any clearer by such presentation,
+                    and a bad program is only made laughable.
+                </p>
+                <p>
+                    Typographic conventions consistently held are important to clear presentation, of course — indenta-
+                    tion is probably the best known and most useful example — but when the ink obscures the intent, typogra-
+                    phy has taken over. So even if you stick with plain old typewriter-like output, be conscious of typographic
+                    silliness. Avoid decoration; for instance, keep comments brief and banner-free. Say what you want to say
+                    in the program, neatly and consistently. Then move on.
+                </p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -48,8 +81,41 @@
 
             <section class="main-section" id="Variables">
                 <header>Variables</header>
-                <p></p>
-                <p></p>
+                <p>
+                    Ah, variable names. Length is not a virtue in a name; clarity of expression <i>is</i>. A global variable
+                    rarely used may deserve a long name, <code>maxphysaddr</code> say. An array index used on every line of a loop
+                    needn't be named any more elaborately than <code>i</code>. Saying <code>index</code> or <code>elementnumber</code> is more to type (or
+                    calls upon your text editor) and obscures the details of the computation. When the variable names are
+                    huge, it's harder to see what's going on. This is partly a typographic issue; consider
+                </p>
+                <p class="indent">
+                    <code>for(i=0 to 100)</code> <br /> <code class="indent-further">array[i]=0</code>
+                </p>
+                <p><i>vs</i></p>
+                <p class="indent">
+                    <code>for(elementnumber=0 to 100)</code> <br /> <code class="indent-further">array[elementnumber]=0;</code>
+                </p>
+                <p>The problem gets worse fast with real examples. Indices are just notation, so treat them as such.</p>
+                <p>
+                    Pointers also require sensible notation. <code>np</code> is just as mnemonic as <code>nodepointer</code> if you con-
+                    sistently use a naming convention from which <code>np</code> means "node pointer" is easily derived. More on this in
+                    the next essay.
+                </p>
+                <p>
+                    As in all other aspects of readable programming, consistency is important in naming. If you call one
+                    variable <code>maxphysaddr</code>, don't call its cousin <code>lowestaddress</code>.
+                </p>
+                <p>
+                    Finally, I prefer minimum-length but maximum-information names, and then let the context fill in the
+                    rest. Globals, for instance, typically have little context when they are used, so their names need to be rela-
+                    tively evocative. Thus I say <code>maxphysaddr</code> (not <code>MaximumPhysicalAddress</code>) for a global variable,
+                    but <code>np</code> not <code>NodePointer</code> for a pointer locally defined and used. This is largely a matter of taste, but
+                    taste is relevant to clarity.
+                </p>
+                <p>
+                    I eschew embedded capital letters in names; to my prose-oriented eyes, they are too awkward to read
+                    comfortably. They jangle like bad typography.
+                </p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -58,18 +124,87 @@
 
             <section class="main-section" id="Pointers">
                 <header>Pointers</header>
-                <p></p>
-                <p></p>
+                <p>
+                    C is unusual in that it allows pointers to point to anything. Pointers are sharp tools, and like any such
+                    tool, used well they can be delightfully productive, but used badly they can do great damage (I sunk a
+                    wood chisel into my thumb a few days before writing this). Pointers have a bad reputation in academia,
+                    because they are considered too dangerous, dirty somehow. But I think they are powerful <i>notation</i>, which
+                    means they can help us express ourselves clearly.
+                </p>
+                <p>
+                    Consider: When you have a pointer to an object, it is a name for exactly that object and no other.
+                    That sounds trivial, but look at the following two expressions:
+                </p>
+                <p class="indent">
+                    <code>np</code> <br />
+                    <code>node[i]</code>
+                </p>
+                <p>
+                    The first points to a node, the second evaluates to (say) the same node. But the second form is an expres-
+                    sion; it is not so simple. To interpret it, we must know what <code>node</code> is, what <code>i</code> is, and that <code>i</code>  and <code>node</code> are
+                    related by the (probably unspecified) rules of the surrounding program. Nothing about the expression in
+                    isolation can show that <code>i</code> is a valid index of <code>node</code>, let alone the index of the element we want. If <code>i</code> and <code>j</code>
+                    and <code>k</code> are all indices into the <code>node</code> array, it's very easy to slip up, and the compiler cannot help. It's partic-
+                    ularly easy to make mistakes when passing things to subroutines: a pointer is a single thing; an array and an
+                    index must be believed to belong together in the receiving subroutine.
+                </p>
+                <p>
+                    An expression that evaluates to an object is inherently more subtle and error-prone than the address
+                    of that object. Correct use of pointers can simplify code:
+                </p>
+                <p class="indent"><code>parent->link[i].type</code></p>
+                <p><i>vs</i></p>
+                <p class="indent"><code>lp->type.</code></p>
+                <p>If we want the next element's type, it's</p>
+                <p class="indent"><code>parent->link[++i].type</code></p>
+                <p>or</p>
+                <p class="indent"><code>(++lp)->type.</code></p>
+                <p>
+                    <code>i</code> advances but the rest of the expression must stay constant; with pointers, there's only one thing to
+                    advance.
+                </p>
+                <p>
+                    Typographic considerations enter here, too. Stepping through structures using pointers can be much
+                    easier to read than with expressions: less ink is needed and less effort is expended by the compiler and
+                    computer. A related issue is that the type of the pointer affects how it can be used correctly, which allows
+                    some helpful compile-time error checking that array indices cannot share. Also, if the objects are struc-
+                    tures, their tag fields are reminders of their type, so
+                </p>
+                <p class="indent"><code class="indent-further">np->left</code></p>
+                <p>
+                    is sufficiently evocative; if an array is being indexed the array will have some well-chosen name and the
+                    expression will end up longer:
+                </p>
+                <p class="indent"><code class="indent-further">node[i].left.</code></p>
+                <p>Again, the extra characters become more irritating as the examples become larger.</p>
+                <p>
+                    As a rule, if you find code containing many similar, complex expressions that evaluate to elements of
+                    a data structure, judicious use of pointers can clear things up. Consider what
+                </p>
+                <p class="indent">
+                    <code>if(goleft)</code> <br />
+                    <code class="indent-further">p->left=p->right->left;</code> <br />
+                    <code>else</code> <br />
+                    <code class="indent-further">p->right=p->left->right;</code>
+                </p>
+                <p>would look like using a compound expression for p. Sometimes it's worth a temporary variable (here <code>p</code>) or
+                    a macro to distill the calculation.</p>
                 <code></code>
                 <ul>
                     <li></li>
                 </ul>
             </section>
 
-            <section class="main-section" id="Functions">
-                <header>Functions</header>
-                <p></p>
-                <p></p>
+            <section class="main-section" id="Procedures">
+                <header>Procedures</header>
+                <p>
+                    Procedure names should reflect what they do; function names should reflect what they <i>return</i>. 
+                    Functions are used in expressions, often in things like <code>if</code>'s, so they need to read appropriately.
+                </p>
+                <p class="indent"><code>if(checksize(x))</code></p>
+                <p>is unhelpful because we can't deduce whether checksize returns true on error or non-error; instead</p>
+                <p class="indent"><code>if(validsize(x))</code></p>
+                <p>makes the point clear and makes a future mistake in using the routine less likely.</p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -78,8 +213,37 @@
 
             <section class="main-section" id="Comments">
                 <header>Comments</header>
-                <p></p>
-                <p></p>
+                <p>
+                    A delicate matter, requiring taste and judgement. I tend to err on the side of eliminating comments,
+                    for several reasons. First, if the code is clear, and uses good type names and variable names, it should
+                    explain itself. Second, comments aren't checked by the compiler, so there is no guarantee they’re right,
+                    especially after the code is modified. A misleading comment can be very confusing. Third, the issue of
+                    typography: comments clutter code.
+                </p>
+                <p>
+                    But I do comment sometimes. Almost exclusively, I use them as an introduction to what follows.
+                    Examples: explaining the use of global variables and types (the one thing I always comment in large pro-
+                    grams); as an introduction to an unusual or critical procedure; or to mark off sections of a large computa-
+                    tion.
+                </p>
+                <p>There is a famously bad comment style:</p>
+                <p class="indent"><code>i=i+1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Add one to i */</code></p>
+                <p>and there are worse ways to do it:</p>
+                <p class="indent">
+                    <code>/**********************************</code><br />
+                    <code>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</code><br />
+                    <code>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add one to i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</code> <br />
+                    <code>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</code><br />
+                    <code>**********************************/</code> <br />
+                    <code class="indent-further">i=i+1;</code>
+                </p>
+                <p>Don't laugh now, wait until you see it in real life.</p>
+                <p>
+                    Avoid cute typography in comments, avoid big blocks of comments except perhaps before vital sec-
+                    tions like the declaration of the central data structure (comments on data are usually much more helpful
+                    than on algorithms); basically, avoid comments. If your code needs a comment to be understood, it would
+                    be better to rewrite it so it's easier to understand. Which brings us to
+                </p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -88,8 +252,48 @@
 
             <section class="main-section" id="Complexity">
                 <header>Complexity</header>
-                <p></p>
-                <p></p>
+                <p>
+                    Most programs are too complicated — that is, more complex than they need to be to solve their problems efficiently. 
+                    Why? Mostly it's because of bad design, but I will skip that issue here because it's a big
+                    one. But programs are often complicated at the microscopic level, and that is something I can address here.
+                </p>
+                <ol>
+                    <li>
+                        You can't tell where a program is going to spend its time. Bottlenecks occur in surprising
+                        places, so don't try to second guess and put in a speed hack until you've proven that's where the bottleneck
+                        is.
+                    </li>
+                    <li>
+                        Measure. Don't tune for speed until you've measured, and even then don't unless one part
+                        of the code <i>overwhelms</i> the rest.
+                    </li>
+                    <li>
+                        Fancy algorithms are slow when <i>n</i> is small, and <i>n</i> is usually small. Fancy algorithms have
+                        big constants. Until you know that <i>n</i> is frequently going to be big, don't get fancy. (Even if <i>n</i> does get
+                        big, use Rule 2 first.) For example, binary trees are always faster than splay trees for workaday problems.
+                    </li>
+                    <li>
+                        Fancy algorithms are buggier than simple ones, and they're much harder to implement. Use
+                        simple algorithms as well as simple data structures.
+                        <p>The following data structures are a complete list for almost all practical programs:</p>
+                        <ul>
+                            <li>array</li>
+                            <li>linked list</li>
+                            <li>hash table</li>
+                            <li>binary tree</li>
+                        </ul>
+                        <p>
+                            Of course, you must also be prepared to collect these into compound data structures. For instance, a sym-
+                            bol table might be implemented as a hash table containing linked lists of arrays of characters.
+                        </p>
+                    </li>
+                    <li>
+                        Data dominates. If you've chosen the right data structures and organized things well, the
+                        algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.
+                        (See Brooks p. 102.)
+                    </li>
+                    <li>There is no Rule 6.</li>
+                </ol>
                 <code></code>
                 <ul>
                     <li></li>
@@ -98,8 +302,30 @@
 
             <section class="main-section" id="Data">
                 <header>Data</header>
-                <p></p>
-                <p></p>
+                <p>
+                    Algorithms, or details of algorithms, can often be encoded compactly, efficiently and expressively as
+                    data rather than, say, as lots of <code>if</code> statements. The reason is that the <i>complexity</i> of the job at hand, if it is
+                    due to a combination of independent details, <i>can be encoded</i>. A classic example of this is parsing tables,
+                    which encode the grammar of a programming language in a form interpretable by a fixed, fairly simple
+                    piece of code. Finite state machines are particularly amenable to this form of attack, but almost any pro-
+                    gram that involves the 'parsing' of some abstract sort of input into a sequence of some independent
+                    'actions' can be constructed profitably as a data-driven algorithm.
+                </p>
+                <p>
+                    Perhaps the most intriguing aspect of this kind of design is that the tables can sometimes be generated 
+                    by another program — a parser generator, in the classical case. As a more earthy example, if an 
+                    operating system is driven by a set of tables that connect I/O requests to the appropriate device drivers, the
+                    system may be 'configured' by a program that reads a description of the particular devices connected to the
+                    machine in question and prints the corresponding tables.
+                </p>
+                <p>
+                    One of the reasons data-driven programs are not common, at least among beginners, is the tyranny of
+                    Pascal. Pascal, like its creator, believes firmly in the separation of code and data. It therefore (at least in its
+                    original form) has no ability to create initialized data. This flies in the face of the theories of Turing and
+                    von Neumann, which define the basic principles of the stored-program computer. Code and data <i>are</i> the
+                    same, or at least they can be. How else can you explain how a compiler works? (Functional languages
+                    have a similar problem with I/O.)
+                </p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -108,8 +334,34 @@
 
             <section class="main-section" id="Function_Pointers">
                 <header>Function Pointers</header>
-                <p></p>
-                <p></p>
+                <p>
+                    Another result of the tyranny of Pascal is that beginners don't use function pointers. (You can't have
+                    function-valued variables in Pascal.) Using function pointers to encode complexity has some interesting
+                    properties.
+                </p>
+                <p>Some of the complexity is passed to the routine pointed to. The routine must obey some standard
+                    protocol — it's one of a set of routines invoked identically — but beyond that, what it does is its business
+                    alone. The complexity is <i>distributed</i>.
+                </p>
+                <p>
+                    There is this idea of a protocol, in that all functions used similarly must behave similarly. This
+                    makes for easy documentation, testing, growth and even making the program run distributed over a net-
+                    work — the protocol can be encoded as remote procedure calls.
+                </p>
+                <p>
+                    I argue that clear use of function pointers is the heart of object-oriented programming. Given a set of
+                    operations you want to perform on data, and a set of data types you want to respond to those operations, the
+                    easiest way to put the program together is with a group of function pointers for each type. This, in a 
+                    nutshell, defines class and method. The O-O languages give you more of course — prettier syntax, derived
+                    types and so on — but conceptually they provide little extra.
+                </p>
+                <p>Combining data-driven programs with function pointers leads to an astonishingly expressive way of
+                    working, a way that, in my experience, has often led to pleasant surprises. Even without a special O-O
+                    language, you can get 90% of the benefit for no extra work and be more in control of the result. I cannot
+                    recommend an implementation style more highly. All the programs I have organized this way have 
+                    survived comfortably after much development — far better than with less disciplined approaches. Maybe
+                    that's it: the discipline it forces pays off handsomely in the long run.
+                </p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -118,8 +370,19 @@
 
             <section class="main-section" id="Include_Files">
                 <header>Include Files</header>
-                <p></p>
-                <p></p>
+                <p>Simple rule: include files should never include include files. If instead they state (in comments or
+                    implicitly) what files they need to have included first, the problem of deciding which files to include is
+                    pushed to the user (programmer) but in a way that's easy to handle and that, by construction, avoids multi-
+                    ple inclusions. Multiple inclusions are a bane of systems programming. It's not rare to have files included
+                    five or more times to compile a single C source file. The Unix <code>/usr/include/sys</code> stuff is terrible this
+                    way.
+                </p>
+                <p>There's a little dance involving <code>#ifdef</code>'s that can prevent a file being read twice, but it's usually
+                    done wrong in practice — the <code>#ifdef</code>'s are in the file itself, not the file that includes it. The result is
+                    often thousands of needless lines of code passing through the lexical analyzer, which is (in good compilers)
+                    the most expensive phase.
+                </p>
+                <p>Just follow the simple rule.</p>
                 <code></code>
                 <ul>
                     <li></li>
@@ -128,7 +391,7 @@
 
             <section class="main-section" id="References">
                 <header>References</header>
-                <p></p>
+                <p>The contents of this web page have been copied from Rob Pike's <a href="http://www.literateprogramming.com/pikestyle.pdf">Notes on Programming in C</a></p>
                 <p></p>
                 <code></code>
                 <ul>
