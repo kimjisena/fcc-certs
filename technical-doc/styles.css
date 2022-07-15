@@ -5,6 +5,11 @@
 html {
     font-size: 10px;
     font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: azure;
 }
 
 main {
@@ -14,6 +19,7 @@ main {
 }
 
 nav {
+    background-color: rgb(189, 146, 146);
     width: 20%;
     height: 100vh;
     position: fixed;
@@ -29,36 +35,64 @@ nav {
 }
 
 header {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     font-family: serif;
 }
 
 p, ol, ul {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .nav-link {
+    color: black;
+    width: 100%;
     display: block;
-    font-size: 1.8rem;
-    height: 45px;
+    font-size: 2.4rem;
+    height: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
+.nav-link:hover {
+    background-color: whitesmoke;
+}
+
+#navbar header {
+    font-size: 4.2rem;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+aside {
+    background-color: antiquewhite;
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 60px;
+}
 
 @media (max-width: 395px) {
     /* place nav at the top */
     nav {
+        background-color: rgb(189, 146, 146);
         width: 100%;
-        height: 30vh;
+        height: 25vh;
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 2;
     }
 
     /* place sections below nav */
     .sections {
     width: 100%;
     position: absolute;
-    top: 30vh;
+    top: 35vh;
     right: 0;
+    z-index: 1;
+    }
+
+    aside {
+        padding-bottom: 0;
     }
 }
