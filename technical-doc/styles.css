@@ -48,14 +48,18 @@ p, ol, ul {
     width: 100%;
     display: block;
     font-size: 2.4rem;
-    height: 50px;
+    height: 70px;
     padding: 20px;
-    margin-bottom: 20px;
     text-decoration: none;
+    border-top: 1px solid black;
+}
+
+#References p a {
+    color: black;
 }
 
 .nav-link:hover {
-    background-color: whitesmoke;
+    background-color: rgb(189, 146, 146);
 }
 
 #navbar header {
@@ -74,6 +78,14 @@ code {
 
 .indent-further {
     margin-left: 40px;
+}
+
+.code {
+    background-color: whitesmoke;
+}
+
+ul {
+    list-style: disc;
 }
 
 aside {

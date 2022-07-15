@@ -82,11 +82,11 @@
                     calls upon your text editor) and obscures the details of the computation. When the variable names are
                     huge, it's harder to see what's going on. This is partly a typographic issue; consider
                 </p>
-                <p class="indent">
+                <p class="code indent">
                     <code>for(i=0 to 100)</code> <br /> <code class="indent-further">array[i]=0;</code>
                 </p>
                 <p><i>vs</i></p>
-                <p class="indent">
+                <p class="code indent">
                     <code>for(elementnumber=0 to 100)</code> <br /> <code class="indent-further">array[elementnumber]=0;</code>
                 </p>
                 <p>The problem gets worse fast with real examples. Indices are just notation, so treat them as such.</p>
@@ -125,7 +125,7 @@
                     Consider: When you have a pointer to an object, it is a name for exactly that object and no other.
                     That sounds trivial, but look at the following two expressions:
                 </p>
-                <p class="indent">
+                <p class="code indent">
                     <code>np</code> <br />
                     <code>node[i]</code>
                 </p>
@@ -142,13 +142,13 @@
                     An expression that evaluates to an object is inherently more subtle and error-prone than the address
                     of that object. Correct use of pointers can simplify code:
                 </p>
-                <p class="indent"><code>parent->link[i].type</code></p>
+                <p class="code indent"><code>parent->link[i].type</code></p>
                 <p><i>vs</i></p>
-                <p class="indent"><code>lp->type.</code></p>
+                <p class="code indent"><code>lp->type.</code></p>
                 <p>If we want the next element's type, it's</p>
-                <p class="indent"><code>parent->link[++i].type</code></p>
+                <p class="code indent"><code>parent->link[++i].type</code></p>
                 <p>or</p>
-                <p class="indent"><code>(++lp)->type.</code></p>
+                <p class="code indent"><code>(++lp)->type.</code></p>
                 <p>
                     <code>i</code> advances but the rest of the expression must stay constant; with pointers, there's only one thing to
                     advance.
@@ -160,18 +160,18 @@
                     some helpful compile-time error checking that array indices cannot share. Also, if the objects are struc-
                     tures, their tag fields are reminders of their type, so
                 </p>
-                <p class="indent"><code class="indent-further">np->left</code></p>
+                <p class="code indent"><code class="indent-further">np->left</code></p>
                 <p>
                     is sufficiently evocative; if an array is being indexed the array will have some well-chosen name and the
                     expression will end up longer:
                 </p>
-                <p class="indent"><code class="indent-further">node[i].left.</code></p>
+                <p class="code indent"><code class="indent-further">node[i].left</code></p>
                 <p>Again, the extra characters become more irritating as the examples become larger.</p>
                 <p>
                     As a rule, if you find code containing many similar, complex expressions that evaluate to elements of
                     a data structure, judicious use of pointers can clear things up. Consider what
                 </p>
-                <p class="indent">
+                <p class="code indent">
                     <code>if(goleft)</code> <br />
                     <code class="indent-further">p->left=p->right->left;</code> <br />
                     <code>else</code> <br />
@@ -188,9 +188,9 @@
                     Procedure names should reflect what they do; function names should reflect what they <i>return</i>. 
                     Functions are used in expressions, often in things like <code>if</code>'s, so they need to read appropriately.
                 </p>
-                <p class="indent"><code>if(checksize(x))</code></p>
+                <p class="code indent"><code>if(checksize(x))</code></p>
                 <p>is unhelpful because we can't deduce whether checksize returns true on error or non-error; instead</p>
-                <p class="indent"><code>if(validsize(x))</code></p>
+                <p class="code indent"><code>if(validsize(x))</code></p>
                 <p>makes the point clear and makes a future mistake in using the routine less likely.</p>
             </section>
 
@@ -210,9 +210,9 @@
                     tion.
                 </p>
                 <p>There is a famously bad comment style:</p>
-                <p class="indent"><code>i=i+1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Add one to i */</code></p>
+                <p class="code indent"><code>i=i+1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Add one to i */</code></p>
                 <p>and there are worse ways to do it:</p>
-                <p class="indent">
+                <p class="code indent">
                     <code>/**********************************</code><br />
                     <code>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</code><br />
                     <code>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add one to i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</code> <br />
