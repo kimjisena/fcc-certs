@@ -7,21 +7,14 @@ html {
     font-family: sans-serif;
 }
 
-header {
-    font-size: 3.6rem;
-    font-family: serif;
-}
-
-p {
-    font-size: 1.6rem;
-}
-
 main {
     position: relative;
+    width: 95%;
+    margin: 0 auto;
 }
 
 nav {
-    width: 30%;
+    width: 20%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -29,11 +22,27 @@ nav {
 }
 
 .sections {
-    width: 70%;
+    width: 80%;
     position: absolute;
     top: 0;
     right: 0;
 }
+
+header {
+    font-size: 3.6rem;
+    font-family: serif;
+}
+
+p, ol, ul {
+    font-size: 1.6rem;
+}
+
+.nav-link {
+    display: block;
+    font-size: 1.8rem;
+    height: 45px;
+}
+
 
 @media (max-width: 395px) {
     /* place nav at the top */
