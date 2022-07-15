@@ -4,7 +4,7 @@
 
 html {
     font-size: 10px;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -36,7 +36,7 @@ nav {
 
 header {
     font-size: 3.2rem;
-    font-family: serif;
+    font-family: 'Roboto Serif', serif;
 }
 
 p, ol, ul {
