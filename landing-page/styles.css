@@ -303,6 +303,15 @@ footer p {
 
 /* iPhone 11 Pro 375 x 812 */
 @media (max-width: 475px) {
+    main {
+        width: 95%;
+    }
+
+    .promo h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
     #form input {
         width: 70%;
         height: 2rem;
