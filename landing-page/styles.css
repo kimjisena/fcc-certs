@@ -135,6 +135,7 @@ iframe {
     flex-direction: column;
     justify-content: space-between;
 }
+
 #features .feature {
     display: flex;
     justify-content: space-between;
@@ -291,6 +292,21 @@ footer p {
 
 /* iPhone 11 Pro 375 x 812 */
 @media (max-width: 475px) {
+    #features .feature {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .feature-icon {
+        font-size: 2.2rem;
+        width: 15%;
+        height: 8rem;
+        text-align: center;
+        color: var(--crimson-red);
+    }
+
     #pricing {
         display: flex;
         flex-direction: column;
