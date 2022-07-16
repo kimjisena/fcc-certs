@@ -10,3 +10,18 @@ body {
     background-image: url(https://phantom-marca.unidadeditorial.es/c22ae7144fd708780514ae7972c0dd7e/resize/660/f/webp/assets/multimedia/imagenes/2022/04/28/16511494281851.jpg);
     background-repeat: space;
 }
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+}
+
+#features {
+    display: flex;
+}
+
+@media (max-width: 475px) {
+    #features {
+        display: flex;
+    }
+}
