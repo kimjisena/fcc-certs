@@ -288,6 +288,11 @@ footer p {
         margin: 2rem 0 2rem 0;
         z-index: 2;
     }
+
+    iframe {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 /* iPhone 11 Pro 375 x 812 */
@@ -324,5 +329,10 @@ footer p {
         background-color: var(--tesla-white);
         margin: 2rem 0 2rem 0;
         z-index: 2;
+    }
+
+    iframe {
+        width: 100%;
+        padding: 0;
     }
 }
