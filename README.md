@@ -28,3 +28,10 @@ in C_ essay. Rob Pike is one of the giants on whose shoulders I'm standing.
 Well, I literally just copied the essay with very little modification.
 - [source](./technical-doc/)
 - [see it live here](https://codepen.io/kimjisena/full/RwMKbQv)
+
+### 4. Product Landing Page
+
+In this project, I built a Tesla Model Pi Phone mock landing page. Yes, I'm a big fan of 
+Elon Musk and his ventures. Elon is so inspirational man!
+- [source](./landing-page/)
+[see it live here](https://codepen.io/kimjisena/full/JjLEWBR)
