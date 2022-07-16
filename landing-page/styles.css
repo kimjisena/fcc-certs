@@ -93,13 +93,21 @@ section {
 
 #features {
     margin: 3rem 0;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #features .feature {
     display: flex;
+    margin-bottom: 2rem;
+}
+
+.feature-icon {
+    font-size: 6rem;
+    width: 8rem;
+    height: 8rem;
+    margin-right: 2rem;
+    text-align: center;
 }
 
 iframe {
