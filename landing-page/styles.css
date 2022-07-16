@@ -99,15 +99,31 @@ section {
 }
 #features .feature {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .feature-icon {
     font-size: 6rem;
-    width: 8rem;
+    width: 15%;
     height: 8rem;
-    margin-right: 2rem;
     text-align: center;
+}
+
+.feature-description {
+    width: 80%;
+}
+
+.feature-description h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.6px;
+}
+
+.feature-description p {
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
+    margin-top: 0.8rem;
 }
 
 iframe {
