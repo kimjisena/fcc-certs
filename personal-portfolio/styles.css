@@ -11,7 +11,10 @@ html {
 }
 
 /* mobile first */
-
+header {
+    position: fixed;
+    top: 0;
+}
 /* sm breakpoint */
 @media (min-width: 640px) {
     
