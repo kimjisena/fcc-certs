@@ -56,6 +56,13 @@ li a {
 
 #welcome-section {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#welcome-section h1, h2, p {
+    text-align: center;
 }
 /* sm breakpoint */
 @media (min-width: 640px) {
