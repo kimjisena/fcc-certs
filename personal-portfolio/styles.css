@@ -116,6 +116,10 @@ li a {
     padding-bottom: 0.5rem;
 }
 
+.project-tile a {
+    text-decoration: none;
+}
+
 #contact {
     height: 80vh;
 }
@@ -134,6 +138,10 @@ li a {
 
 .social h1 {
     font-size: 2rem;
+}
+
+.social a {
+    text-decoration: none;
 }
 
 footer {
