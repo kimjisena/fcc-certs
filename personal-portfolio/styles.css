@@ -9,3 +9,31 @@
 html {
     font-size: 62.5%;
 }
+
+/* mobile first */
+
+/* sm breakpoint */
+@media (min-width: 640px) {
+    
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+    
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+    
+}
+
+/* xl breakpoint */
+@media (min-width: 1280px) {
+    
+}
+
+/* 2xl breakpoint */
+
+@media (min-width: 1536px) {
+    
+}
