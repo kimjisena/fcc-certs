@@ -183,6 +183,29 @@ footer p {
     section {
         padding-top: 10rem;
     }
+
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    #projects h1 {
+        grid-column: 1 / -1;
+    }
+    
+    .project-tile {
+        height: 35vh;
+        padding-bottom: 2rem;
+    }
+    
+    .thumbnail {
+        height: 80%;
+    }
+    
+    .project-tile p {
+        height: 20%;
+    }
 }
 
 /* md breakpoint */
