@@ -54,7 +54,7 @@ li a {
     text-decoration: none;
 }
 
-#welcome-section {
+#welcome-section, #contact {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ li a {
     flex-direction: column;
 }
 
-#projects h1 {
+#projects h1, #contact > h1 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 3.6rem;
@@ -105,6 +105,30 @@ li a {
     font-size: 2.8rem;
     padding-top: 0.6rem;
     padding-bottom: 0.5rem;
+}
+
+#contact {
+    height: 80vh;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.fab {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.social h1 {
+    font-size: 2rem;
+}
+
+footer {
+    height: 20vh;
 }
 /* sm breakpoint */
 @media (min-width: 640px) {
