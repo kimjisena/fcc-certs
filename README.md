@@ -35,3 +35,10 @@ In this project, I built a Tesla Model Pi Phone mock landing page. Yes, I'm a bi
 Elon Musk and his ventures. Elon is so inspirational man!
 - [source](./landing-page/)
 [see it live here](https://codepen.io/kimjisena/full/JjLEWBR)
+
+### 5. Personal Portfolio Page
+
+In this project, I built a personal portfolio page to showcase my other projects.
+
+- [source](./personal-portfolio/)
+- [see it live here](https://codepen.io/kimjisena/full/RwMKegY)
