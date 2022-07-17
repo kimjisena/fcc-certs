@@ -112,8 +112,9 @@ li a {
     height: 15%;
     text-align: center;
     font-size: 2.8rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-tile a {
@@ -157,8 +158,31 @@ footer p {
     font-size: 1.8rem;
 }
 /* sm breakpoint */
-@media (min-width: 640px) {
+@media (min-width: 560px) {
+    header {
+        height: 10rem;
+    }
     
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5%;
+    }
+    
+    nav ul li {
+        text-align: center;
+        font-size: 3.2rem;
+        margin-right: 1.5rem;
+    }
+
+    nav ul li:last-of-type {
+        margin: 0;
+    }
+
+    section {
+        padding-top: 10rem;
+    }
 }
 
 /* md breakpoint */
