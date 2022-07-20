@@ -57,5 +57,5 @@ In this project, I built a personal portfolio page to showcase my other projects
 ### 4. Telephone Number Validator
 - [source](./js-alg-and-ds/telephone-number-validator/)
 
-### 5. cash Register
+### 5. Cash Register
 - [source](./js-alg-and-ds/cash-register/)
