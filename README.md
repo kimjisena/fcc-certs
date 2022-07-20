@@ -42,3 +42,20 @@ In this project, I built a personal portfolio page to showcase my other projects
 
 - [source](./responsive-web-design/personal-portfolio/)
 - [see it live here](https://codepen.io/kimjisena/full/RwMKegY)
+
+## JavaScript Algorithms and Data Structures Projects
+
+### 1. Palindrome Checker
+- [source](./js-alg-and-ds/palindrome-checker/)
+
+### 2. Roman Numeral Converter
+- [source](./js-alg-and-ds/roman-converter/)
+
+### 3. Caesars Cipher
+- [source](./js-alg-and-ds/caesars-cipher/)
+
+### 4. Telephone Number Validator
+- [source](./js-alg-and-ds/telephone-number-validator/)
+
+### 5. cash Register
+- [source](./js-alg-and-ds/cash-register/)
