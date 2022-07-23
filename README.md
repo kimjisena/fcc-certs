@@ -34,7 +34,7 @@ Well, I literally just copied the essay with very little modification.
 In this project, I built a Tesla Model Pi Phone mock landing page. Yes, I'm a big fan of 
 Elon Musk and his ventures. Elon is so inspirational man!
 - [source](./responsive-web-design/landing-page/)
-[see it live here](https://codepen.io/kimjisena/full/JjLEWBR)
+- [see it live here](https://codepen.io/kimjisena/full/JjLEWBR)
 
 ### 5. Personal Portfolio Page
 
@@ -59,3 +59,15 @@ In this project, I built a personal portfolio page to showcase my other projects
 
 ### 5. Cash Register
 - [source](./js-alg-and-ds/cash-register/)
+
+## Front End Development Libraries Projects
+
+### 1. Random Quote Machine
+
+In this project, I built a random quote machine. Being a linux fanatic (literally), I 
+gave the project a linux terminal theme.
+
+**Tools:** HTML, CSS, and jQuery.
+
+- [source](https://github.com/kimjisena/random-quote-machine)
+- [see it live here](https://kimjisena.github.io/random-quote-machine/)
