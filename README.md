@@ -67,7 +67,17 @@ In this project, I built a personal portfolio page to showcase my other projects
 In this project, I built a random quote machine. Being a linux fanatic (literally), I 
 gave the project a linux terminal theme.
 
-**Tools:** HTML, CSS, and jQuery.
+**Tools:** HTML, CSS, jQuery
 
 - [source](https://github.com/kimjisena/random-quote-machine)
 - [see it live here](https://kimjisena.github.io/random-quote-machine/)
+
+### 2. Markdown Previewer
+
+In this project, I built a Github flavored markdown previewer. I gave this project 
+a VS Code look and feel.
+
+**Tools:** React, TailwindCSS
+
+- [source](https://github.com/kimjisena/markdown-previewer)
+- [see it live here](https://kimjisena.github.io/markdown-previewer/)
