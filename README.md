@@ -81,3 +81,12 @@ a VS Code look and feel.
 
 - [source](https://github.com/kimjisena/markdown-previewer)
 - [see it live here](https://kimjisena.github.io/markdown-previewer/)
+
+### 3. Drum Machine
+
+In this project, I built a drum machine. I was quite impressed by how the UI turned out.
+
+**Tools**: React, TailwindCSS
+
+- [source](https://github.com/kimjisena/drum-machine)
+- [see it live here](https://kimjisena.github.io/drum-machine/)
