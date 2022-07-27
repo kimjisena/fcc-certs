@@ -90,3 +90,13 @@ In this project, I built a drum machine. I was quite impressed by how the UI tur
 
 - [source](https://github.com/kimjisena/drum-machine)
 - [see it live here](https://kimjisena.github.io/drum-machine/)
+
+### 4. JavaScript Calculator
+
+In this project, I built a basic calculator. I gave it the look and feel of my **CASIO fx-991ms**.
+Totally liked the result.
+
+**Tools**: React, TailwindCSS
+
+- [source](https://github.com/kimjisena/js-calculator)
+- [see it live here](https://kimjisena.github.io/js-calculator/)
