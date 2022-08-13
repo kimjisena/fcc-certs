@@ -100,3 +100,13 @@ Totally liked the result.
 
 - [source](https://github.com/kimjisena/js-calculator)
 - [see it live here](https://kimjisena.github.io/js-calculator/)
+
+### 5. 25 + 5 Clock
+
+In this project, I built a 25 + 5 clock. Pomodoro. I experimented with React `hooks` and now I'm 
+hooked! This project gave me the opportunity to understand React deeply and I think now I do.
+
+**Tools**: React, TailwindCSS
+
+- [source](https://github.com/kimjisena/25-plus-5-clock)
+- [see it live here](https://kimjisena.github.io/25-plus-5-clock/)
